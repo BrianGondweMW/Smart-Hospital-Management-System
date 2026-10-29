@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Patients | SHMS</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/search.css">
+
+    <script src="../assets/js/search.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div>
+        <h1>SHMS</h1>
+        <p>Patient Management</p>
+    </div>
+
+    <a href="register.html" class="top-link">
+        Register Patient
+    </a>
+</header>
+
+<main class="container">
+
+    <div class="page-heading">
+        <h2>Search Patients</h2>
+        <p>
+            Find registered patients using their
+            unique ID, first name or last name.
+        </p>
+    </div>
+
+    <section class="card">
+
+        <form id="searchForm" class="search-form">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Enter Patient ID or Name"
+                maxlength="100"
+                required
+            >
+
+            <button type="submit" id="searchBtn">
+                Search
+            </button>
+        </form>
+
+        <p id="status" role="status"
+           aria-live="polite"></p>
+
+        <div id="results" class="results"></div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

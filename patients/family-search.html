@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Family Patient Search | SHMS</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/search.css">
+
+    <script src="../assets/js/family-search.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div>
+        <h1>SHMS</h1>
+        <p>Family-Based Patient Identification</p>
+    </div>
+
+    <a href="search.html" class="top-link">
+        Patient Search
+    </a>
+</header>
+
+<main class="container">
+
+    <div class="page-heading">
+        <h2>Find Patient Through Family</h2>
+        <p>
+            Locate a patient's existing record by searching
+            for their registered parent or guardian.
+        </p>
+    </div>
+
+    <section class="card">
+
+        <h3>Search Parent or Guardian</h3>
+
+        <form id="familySearchForm" class="search-form">
+            <input
+                type="search"
+                id="familySearchInput"
+                placeholder="Enter parent's name or patient ID"
+                minlength="2"
+                maxlength="100"
+                required
+            >
+
+            <button type="submit" id="familySearchBtn">
+                Search
+            </button>
+        </form>
+
+        <p id="searchStatus"
+           role="status"
+           aria-live="polite"></p>
+
+        <div id="parentResults" class="results"></div>
+
+    </section>
+
+    <section class="card" style="margin-top: 20px;">
+
+        <h3>Linked Family Members</h3>
+
+        <p>
+            Select a parent or guardian above to view
+            their linked family members.
+        </p>
+
+        <div id="linkedFamilyResults" class="results">
+            <p>No family member selected.</p>
+        </div>
+
+    </section>
+
+    <section class="card" style="margin-top: 20px;">
+        <h3>Identity Verification</h3>
+
+        <p>
+            Finding a family relationship does not
+            automatically verify a patient's identity.
+            An authorized hospital worker must confirm
+            the patient's identity before opening
+            confidential medical information.
+        </p>
+    </section>
+
+</main>
+
+</body>
+</html>

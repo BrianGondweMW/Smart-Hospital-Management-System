@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Family Linking | SHMS</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/family.css">
+
+    <script src="../assets/js/family.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <h1>SHMS</h1>
+    <p>Family Relationship Management</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Link Family Members</h2>
+
+        <p>
+            Connect a registered patient to their
+            parent, child, or legal guardian.
+        </p>
+
+        <form id="familyForm">
+
+            <label for="patientId">
+                Patient ID
+            </label>
+
+            <input
+                type="text"
+                id="patientId"
+                placeholder="e.g. SHMS-A7K92B"
+                required
+            >
+
+            <label for="relatedPatientId">
+                Family Member Patient ID
+            </label>
+
+            <input
+                type="text"
+                id="relatedPatientId"
+                placeholder="Enter linked patient's ID"
+                required
+            >
+
+            <label for="relationshipType">
+                Relationship
+            </label>
+
+            <select id="relationshipType" required>
+                <option value="">Select Relationship</option>
+                <option value="Mother">Mother</option>
+                <option value="Father">Father</option>
+                <option value="Child">Child</option>
+                <option value="Guardian">Guardian</option>
+            </select>
+
+            <button type="submit">
+                Link Family Member
+            </button>
+
+        </form>
+
+        <div id="message" role="status"
+             aria-live="polite"></div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

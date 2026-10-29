@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7fb;
+    color: #20344b;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: #0b477c;
+    color: white;
+    padding: 22px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.topbar h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    font-size: 13px;
+    color: #d5e7f7;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.staff-info strong {
+    font-size: 14px;
+}
+
+.staff-info span {
+    color: #d5e7f7;
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    font-size: 26px;
+    color: #0b477c;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+    color: #0b477c;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #0878d1;
+    color: white;
+    padding: 11px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dashboard-card a:hover {
+    background: #075fa6;
+}
+
+.security-note {
+    margin-top: 35px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 18px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+}
